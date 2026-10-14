@@ -10,9 +10,9 @@ export default class PeopleDaoMongoDB {
         }
     }
     
-    async getByID(){
+    async getByID(id){
         try {
-            const response = await UserModel.findByID();
+            const response = await UserModel.findByID(Id);
             return response;
         } catch (error) {
             console.log(error);

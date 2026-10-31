@@ -17,5 +17,9 @@
     "url": "https://github.com/Hfroiman/HOME-API-REST/issues"
   },
   "homepage": "https://github.com/Hfroiman/HOME-API-REST#readme",
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "express": "^5.3.0",
+    "mongoose": "^9.11.4"
+  }
 }

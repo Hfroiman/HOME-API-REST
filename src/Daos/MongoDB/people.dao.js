@@ -10,7 +10,7 @@ export default class PeopleDaoMongoDB {
         }
     }
     
-    async getByID(id){
+    async getByID(Id){
         try {
             const response = await UserModel.findByID(Id);
             return response;
@@ -28,18 +28,18 @@ export default class PeopleDaoMongoDB {
         }
     }
 
-    async Update(id, obj){
+    async Update(Id, obj){
         try {
-            const response = await UserModel.findByIDandUpdate(id, obj, { new: true});
+            const response = await UserModel.findByIDandUpdate(Id, obj, { new: true});
             return response;
         } catch (error) {
             console.log(error);
         }
     }
 
-    async Delete (id){
+    async Delete (Id){
         try {
-            const response = await UserModel.findByIDandDelete(id);
+            const response = await UserModel.findByIDandDelete(Id);
             return response;
         } catch (error) {
             console.log(error);

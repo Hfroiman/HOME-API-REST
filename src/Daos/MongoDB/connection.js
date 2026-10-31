@@ -1,6 +1,6 @@
-import mongoose from 'mongoose':
+import mongoose from 'mongoose';
 
-const connectionstring = 'mongodb://localhost:27017/';
+const connectionstring = 'mongodb://localhost:27017/PONER-NOMBRE-BASE-DATOS';
 export const InitMongoDB = async () => {
     try {
         await mongoose.connect(connectionstring);

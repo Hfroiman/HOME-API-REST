@@ -1,4 +1,4 @@
-import PeopleDaoMongoDB from "./Daos/MongoDB/people.dao.js";
+import PeopleDaoMongoDB from '../Daos/MongoDB/people.dao.js'
 const PeopleDao = new PeopleDaoMongoDB();
 
 export const getAll = async () => {
@@ -33,7 +33,7 @@ export const Update = async (Id, obj) => {
     }
 }
 
-export const Delete = async (id) => {
+export const Delete = async (Id) => {
     try {
         return await PeopleDao.Delete(Id);
     } catch (error) {

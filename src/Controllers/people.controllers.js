@@ -22,8 +22,7 @@ export const getByID = async (req, res, next) => {
 
 export const create = async (req, res, next) => {
     try {
-        const {obj} = req.params;
-        const person =  await services.create(obj);
+        const person =  await services.create(req.body);
         if(!person) res.status(404).json({msg: 'Error can´t creat'})
     } catch (error) {
         console.log(error);

@@ -1,6 +1,6 @@
 import mongoose from 'mongoose';
 
-const connectionstring = 'mongodb://localhost:27017/PONER-NOMBRE-BASE-DATOS';
+const connectionstring = 'mongodb://localhost:27017/HOME-API-REST';
 export const InitMongoDB = async () => {
     try {
         await mongoose.connect(connectionstring);

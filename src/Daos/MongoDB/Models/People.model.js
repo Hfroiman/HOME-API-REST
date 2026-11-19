@@ -1,11 +1,11 @@
-import { schema } from "mongoose";
+import { model, Schema } from "mongoose";
 
-const UserSchema = new schema ({
-    firstname:{type:string, required:true, max:20},
-    secondname:{type:string, required:true, max:20},
-    lastname:{type:string, required:true, max:20},
-    age:{type:number, required:true},
-    role:{type:string,  default:'user'}
+const UserSchema = new Schema ({
+    firstname:{type:String, required:true},
+    secondname:{type:String, required:true},
+    lastname:{type:String, required:true},
+    age:{type:Number, required:true},
+    role:{type:String,  default:'user'}
 });
 
 export const UserModel = model('users', UserSchema);

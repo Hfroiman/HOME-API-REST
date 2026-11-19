@@ -11,7 +11,7 @@ export const getAll =  async (req, res, next) => {
 
 export const getByID = async (req, res, nect) => {
     try {
-        const {Id} =  req.params;
+        const {Id} =  req.params.Id;
         const person = await services.getByID(Id);
         if(!person) res.status(404).json({msg: 'Person not found'});
         else res.json(person);

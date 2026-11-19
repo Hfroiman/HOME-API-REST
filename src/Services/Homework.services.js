@@ -1,9 +1,9 @@
-import HomeworDaoMongoDB from '../Daos/MongoDB/homework.dao.js'
-const PeopleDao = new PeopleDaoMongoDB();
+import homeworkMongoDB from '../Daos/MongoDB/homework.dao.js'
+const homeworkDao = new homeworkMongoDB();
 
 export const getAll = async () => {
     try {
-        return await PeopleDao.getAll();
+        return await homeworkDao.getAll();
     } catch (error) {
         console.log(error);
     }
@@ -11,7 +11,7 @@ export const getAll = async () => {
 
 export const getByID = async (Id) => {
     try {
-        return await PeopleDao.getByID(Id);
+        return await homeworkDao.getByID(Id);
     } catch (error) {
         console.log(error);
     }
@@ -19,7 +19,7 @@ export const getByID = async (Id) => {
 
 export const create = async (obj) => {
     try {
-        return  await PeopleDao.create(obj);
+        return  await homeworkDao.create(obj);
     } catch (error) {
         console.log(error);
     }
@@ -27,7 +27,7 @@ export const create = async (obj) => {
 
 export const Update = async (Id, obj) => {
     try {
-        return await PeopleDao.Update(Id, obj);
+        return await homeworkDao.Update(Id, obj);
     } catch (error) {
         console.log(error);
     }
@@ -35,7 +35,7 @@ export const Update = async (Id, obj) => {
 
 export const Delete = async (Id) => {
     try {
-        return await PeopleDao.Delete(Id);
+        return await homeworkDao.Delete(Id);
     } catch (error) {
         console.log(error);
     }

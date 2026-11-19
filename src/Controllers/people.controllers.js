@@ -9,9 +9,9 @@ export const getAll =  async (req, res, next) => {
     }
 };
 
-export const getByID = async (req, res, nect) => {
+export const getByID = async (req, res, next) => {
     try {
-        const {Id} =  req.params.Id;
+        const {Id} =  req.params;
         const person = await services.getByID(Id);
         if(!person) res.status(404).json({msg: 'Person not found'});
         else res.json(person);

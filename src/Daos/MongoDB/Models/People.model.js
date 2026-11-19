@@ -8,4 +8,4 @@ const UserSchema = new Schema ({
     role:{type:String,  default:'user'}
 });
 
-export const UserModel = model('users', UserSchema);
+export const UserModel = model('Users', UserSchema);

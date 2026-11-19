@@ -30,7 +30,7 @@ export default class homeworkMongoDB {
 
     async Update(Id, obj){
         try {
-            const response = await HomeworkModel.findByIDandUpdate(Id, obj, { new: true});
+            const response = await HomeworkModel.findByIdAndUpdate(Id, obj, { new: true});
             return response;
         } catch (error) {
             console.log(error);
@@ -39,7 +39,7 @@ export default class homeworkMongoDB {
 
     async Delete (Id){
         try {
-            const response = await HomeworkModel.findByIDandDelete(Id);
+            const response = await HomeworkModel.findByIdAndDelete(Id);
             return response;
         } catch (error) {
             console.log(error);

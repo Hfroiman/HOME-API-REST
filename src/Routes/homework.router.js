@@ -7,6 +7,6 @@ router.get('/', Controller.getAll);
 router.get('/:Id', Controller.getByID);
 router.post('/', Controller.create);
 router.put('/', Controller.Update);
-router.delete('/:id', Controller.Delete);
+router.delete('/:Id', Controller.Delete);
 
 export default router;

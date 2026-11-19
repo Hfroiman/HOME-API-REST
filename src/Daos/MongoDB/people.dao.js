@@ -30,7 +30,7 @@ export default class PeopleDaoMongoDB {
 
     async Update(Id, obj){
         try {
-            const response = await UserModel.findByIDandUpdate(Id, obj, { new: true});
+            const response = await UserModel.findByIdAndUpdate(Id, obj, { new: true});
             return response;
         } catch (error) {
             console.log(error);
@@ -39,7 +39,7 @@ export default class PeopleDaoMongoDB {
 
     async Delete (Id){
         try {
-            const response = await UserModel.findByIDandDelete(Id);
+            const response = await UserModel.findByIdAndDelete(Id);
             return response;
         } catch (error) {
             console.log(error);

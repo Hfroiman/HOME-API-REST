@@ -5,7 +5,9 @@ const UserSchema = new Schema ({
     secondname:{type:String, required:true},
     lastname:{type:String, required:true},
     age:{type:Number, required:true},
-    role:{type:String,  default:'user'}
+    role:{type:String,  default:'user'},
+    password:{type:String, default:'1234'},
+    user:{type: String}
 });
 
 export const UserModel = model('Users', UserSchema);

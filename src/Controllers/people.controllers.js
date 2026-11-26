@@ -50,3 +50,33 @@ export const Delete = async (req, res, next) => {
         console.log(error);
     }
 }
+
+export const getUser =  async (req, res, next) => {
+    try {
+        const user = await services.getUser(req.body);
+        if(!user) res.status(404).json({msg: 'Person not found'});
+        else res.json(user);
+    } catch (error) {
+        console.log(error);
+    }
+};
+
+export const getbyUser =  async (req, res, next) => {
+    try {
+        const user = await services.getbyUser(req.body);
+        if(!user) res.status(404).json({msg: 'User not found'});
+        else res.json(user);
+    } catch (error) {
+        console.log(error);
+    }
+};
+
+export const getbyDNI =  async (req, res, next) => {
+    try {
+        const user = await services.getbyDNI(req.body);
+        if(!user) res.status(404).json({msg: 'User not found'});
+        else res.json(user);
+    } catch (error) {
+        console.log(error);
+    }
+};

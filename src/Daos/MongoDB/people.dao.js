@@ -45,4 +45,31 @@ export default class PeopleDaoMongoDB {
             console.log(error);
         }
     }
+
+    async findUser(obj){
+        try {
+            const response = await UserModel.findOne({user:obj.user, password:obj.password});
+            return response;
+        } catch (error) {
+            console.log(error);
+        }
+    }
+
+    async findPassword(obj){
+        try {
+            const response = await UserModel.findOne({user:obj.user});
+            return response;
+        } catch (error) {
+            console.log(error);
+        }
+    }
+
+    async findUserbyDNI(obj){
+        try {
+            const response = await UserModel.findOne({dni:obj.dni});
+            return response;
+        } catch (error) {
+            console.log(error);
+        }
+    }
 }

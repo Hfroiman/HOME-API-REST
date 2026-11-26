@@ -40,3 +40,27 @@ export const Delete = async (Id) => {
         console.log(error);
     }
 }
+
+export const getUser = async (obj) => {
+    try {
+        return await PeopleDao.findUser(obj);
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+export const getbyUser = async (obj) => {
+    try {
+        return await PeopleDao.findPassword(obj);
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+export const getbyDNI = async (obj) => {
+    try {
+        return await PeopleDao.findUserbyDNI(obj);
+    } catch (error) {
+        console.log(error);
+    }
+}

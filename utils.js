@@ -1,0 +1,1 @@
+export const REACT_APP = 'http://localhost:5173/'

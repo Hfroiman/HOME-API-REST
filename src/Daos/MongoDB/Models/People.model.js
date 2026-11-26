@@ -7,7 +7,8 @@ const UserSchema = new Schema ({
     age:{type:Number, required:true},
     role:{type:String,  default:'user'},
     password:{type:String, default:'1234'},
-    user:{type: String}
+    user:{type:String},
+    dni:{type:String, required:true}
 });
 
 export const UserModel = model('Users', UserSchema);
